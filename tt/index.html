@@ -8,24 +8,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/50376221042" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" title="Contactanos por WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.255.949l-.305.149L2.967 3.23l.961 2.867c-.16.463-.251.822-.251 1.335 0 2.619 2.134 4.753 4.753 4.753 1.27 0 2.46-.505 3.355-1.346l.215-.184.822.041c1.285.067 2.502-.365 3.414-1.217.91-.85 1.414-2.04 1.414-3.304 0-2.619-2.134-4.753-4.753-4.753z"/>
+        </svg>
+    </a>
+
     <header>
         <div class="container">
-            <h1 class="logo">DOUGLAS AYALA - CONSTRUCCIONES</h1>
+            <div class="logo-section">
+                <img src="imagenes/Logo D.png" alt="Douglas Ayala Logo" class="logo-img">
+                <h1 class="logo-text">DOUGLAS CONSTRUCCIONES</h1>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#" class="active">INICIO</a></li>
-                    <li><a href="#">SOBRE MÍ</a></li>
-                    <li><a href="#">TRABAJOS</a></li>
+                    <li><a href="#">PROYECTOS</a></li>
+                    <li><a href="#">SERVICIOS</a></li>
+                    <li><a href="#">NOSOTROS</a></li>
                     <li><a href="#">CONTACTO</a></li>
                 </ul>
             </nav>
+            <a href="#" class="btn-cotizacion">SOLICITAR COTIZACIÓN</a>
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2>CONSTRUYENDO SUEÑOS<br> CON PRECISIÓN Y CALIDAD.</h2>
+                <h2>CONSTRUYE TU CASA CON PRESICION Y CALIDAD</h2>
                 <p>Mira mis proyectos recientes.</p>
             </div>
         </div>
@@ -39,19 +51,90 @@
                     <img src="imagenes/albañil.jpg" alt="Residencia Moderna">
                     <h4>TRABAJOS ALBAÑILERIA</h4>
                     <p>Levantamos tu casa desde los cimientos.</p>
-                    <a href="#" class="btn">VER PROYECTO</a>
+                    <a href="#" class="btn show-more" data-project="Albañilería">VER PROYECTO</a>
                 </div>
                 <div class="portfolio-item">
                     <img src="imagenes/azulejo.jpg" alt="Renovación de Oficinas">
                     <h4>TRABAJOS CON CERÁMICA</h4>
                     <p>Trabajamos con todo tipo de Ceramica y azulejos.</p>
-                    <a href="#" class="btn">VER PROYECTO</a>
+                    <a href="#" class="btn show-more" data-project="Cerámica">VER PROYECTO</a>
                 </div>
                 <div class="portfolio-item">
                     <img src="imagenes/soldadura.jpg" alt="Estructura de Madera">
                     <h4>SOLDADURA METALICA</h4>
                     <p>Estructura pequeñas y segunda planta</p>
-                    <a href="#" class="btn">VER PROYECTO</a>
+                    <a href="#" class="btn show-more" data-project="Soldadura">VER PROYECTO</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-details" id="project-details" style="display:none;">
+        <div class="container">
+            <h3 id="project-details-title">Detalle del proyecto</h3>
+            <p id="project-details-text">Estás viendo los trabajos relacionados con este proyecto.</p>
+            <div class="portfolio-grid" id="project-details-grid">
+                <!-- Las 6 subfichas se llenarán dinámicamente desde JS -->
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h3>Preguntas Frecuentes</h3>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">¿Cuánto tiempo tarda un proyecto típico?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>El tiempo depende de la complejidad del proyecto. Proyectos pequeños pueden tomar 2-4 semanas, mientras que proyectos más complejos pueden extenderse de 2-3 meses. Nos adaptamos a tu cronograma.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">¿En qué zonas trabajan?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nos movemos en los departamentos de San Salvador, Santa Ana y La Libertad. Realizamos visitas de evaluación en toda la zona para brindarte un excelente servicio. Contáctanos para consultar disponibilidad en tu área específica.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">¿Puedo solicitar una cotización sin compromiso?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutamente. Realizamos visitas gratis de evaluación y cotización. Contáctanos al 7622 1042 o usa el botón "SOLICITAR COTIZACIÓN" para que podamos asesorarte sin ningún costo.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">¿Qué materiales utilizan en cerámica?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Trabajamos con cerámicas y azulejos de primera calidad de marcas reconocidas. Contamos con variedades en acabados: mate, brillante, rústico, moderno y más opciones según tu preferencia.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">¿Realizan trabajos de albañilería completa?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí. Desde cimientos, levantamiento de muros, impermeabilización, revoque hasta acabados finales. Nos especializamos en construcción de viviendas nuevas y ampliaciones.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">¿Pueden hacer estructuras de soldadura?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, realizamos estructuras metálicas soldadas para segundas plantas, cubiertas, escaleras y refuerzos estructurales. Todos nuestros trabajos cumplen normas de seguridad técnica.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,8 +142,100 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Douglas AYALA - Construcciones</p>
+            <p class="phone">Teléfono: 7622 1042</p>
+            <p>&copy; 2026 Douglas AYALA - Construcciones. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.show-more');
+        const detailsSection = document.getElementById('project-details');
+        const title = document.getElementById('project-details-title');
+        const text = document.getElementById('project-details-text');
+        const grid = document.getElementById('project-details-grid');
+
+        const projectData = {
+            'Albañilería': [
+                {src:'imagenes/cimientos.jpg', title:'Cimiento fuerte', desc:'Base construida para larga duración'},
+                {src:'imagenes/alba2.jpg', title:'Levantando paredes', desc:'Bloques y estructura nivelada'},
+                {src:'imagenes/alba3.jpg', title:'Impermeabilización', desc:'Protección contra humedad'},
+                {src:'imagenes/alba4.jpg', title:'Revoque y acabado', desc:'Pulido y preparación final'},
+                {src:'imagenes/alba5.jpg', title:'Estructura completa', desc:'Pisos y techos listos'},
+                {src:'imagenes/alba6.jpg', title:'Entrega final', desc:'Proyecto culminado con éxito'}
+            ],
+            'Cerámica': [
+                {src:'imagenes/ceramica 1.jpg', title:'Preparación del piso', desc:'Base limpia lista para la instalación de cerámica'},
+                {src:'imagenes/ceramica 2.jpg', title:'Colocación de cerámica', desc:'Azulejos profesionalmente nivelados y alineados'},
+                {src:'imagenes/ceramica 3.jpg', title:'Acabados y detalles', desc:'Remates finales en paredes y ventilación'},
+                {src:'imagenes/patio 1.jpg', title:'Instalación en curso', desc:'Fijación precisa de baldosas y preparación para la lechada.'},
+                {src:'imagenes/patio 2.jpg', title:'Área amplia finalizada', desc:'Espacio completo con acabado impecable'},
+                {src:'imagenes/patio 3.jpg', title:'Revisión final y limpieza', desc:'Control de calidad en cada detalle'}
+            ],
+            'Soldadura': [
+                {src:'imagenes/sold1.jpg', title:'Estructura metálica', desc:'Montaje base resistente'},
+                {src:'imagenes/sold2.jpg', title:'Puntos de soldadura', desc:'Uniones fuertes y seguras'},
+                {src:'imagenes/sold3.jpg', title:'Pulido de soldadura', desc:'Terminación profesional'},
+                {src:'imagenes/sold4.jpg', title:'Prueba de tensión', desc:'Verificación técnica de seguridad'},
+                {src:'imagenes/sold5.jpg', title:'Montaje final', desc:'Instalación de estructuras complementarias'},
+                {src:'imagenes/sold6.jpg', title:'Proyecto listo', desc:'Entrega con garantía'}
+            ]
+        };
+
+        const projectDescriptions = {
+            'Albañilería': 'Desde la preparación de cimientos hasta la entrega final, cada paso es cuidadosamente ejecutado con experiencia y precisión. Vea cómo transformamos sus sueños en estructuras sólidas.',
+            'Cerámica': 'Trabajamos con materiales de primera calidad y técnicas profesionales. Desde la preparación hasta los detalles finales, cada proyecto brilla por su acabado impecable.',
+            'Soldadura': 'Estructuras metálicas resistentes y confiables. Utilizamos las más altas normas de seguridad y calidad en cada soldadura para garantizar durabilidad.'
+        };
+
+        function renderProject(project) {
+            const items = projectData[project] || [];
+            grid.innerHTML = '';
+
+            if (!items.length) {
+                text.textContent = 'No hay imágenes asignadas a este proyecto aún, puedes agregarlas manualmente.';
+                return;
+            }
+
+            items.forEach((item, idx) => {
+                const card = document.createElement('div');
+                card.className = 'project-subitem';
+                card.innerHTML = `
+                    <img src="${item.src}" alt="${project} ${idx + 1}">
+                    <h4>${item.title}</h4>
+                    <p>${item.desc}</p>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', function(event) {
+                event.preventDefault();
+                
+                // Si ya está abierto, lo cierra
+                if (detailsSection.style.display === 'block') {
+                    detailsSection.style.display = 'none';
+                    return;
+                }
+                
+                // Si está cerrado, lo abre
+                const project = this.dataset.project || 'Proyecto';
+                title.textContent = `${project} - Galería de imágenes`;
+                text.textContent = projectDescriptions[project] || 'Galería de proyectos.';
+                renderProject(project);
+                detailsSection.style.display = 'block';
+                detailsSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
